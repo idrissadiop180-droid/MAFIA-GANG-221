@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paiement</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+h2{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #0056b3;
+}
+
+.back{
+    background: gray;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Enregistrement d'un Paiement</h2>
+
+    <!-- REDIRECTION VERS welcome.html -->
+    <form action="welcom.html" method="get">
+
+        <label>Matricule</label>
+        <input type="text" name="matricule" required>
+
+        <label>Filière</label>
+        <input type="text" name="filiere" required>
+
+        <label>Niveau</label>
+        <select name="niveau" required>
+            <option value="">Sélectionner</option>
+            <option>L1</option>
+            <option>L2</option>
+            <option>L3</option>
+            <option>M1</option>
+            <option>M2</option>
+        </select>
+
+        <label>Montant</label>
+        <input type="number" name="montant" required>
+
+        <label>Objet du paiement</label>
+        <textarea name="objet" rows="3" required></textarea>
+
+        <label>Date</label>
+        <input type="date" name="date" required>
+
+        <button type="submit">Enregistrer</button>
+
+    </form>
+
+    <!-- BOUTON RETOUR -->
+    <a href="welcom.html">
+        <button class="back" type="button">Retour</button>
+    </a>
+
+</div>
+
+</body>
+</html>
